@@ -1,0 +1,27 @@
+{
+  "name": "ricky_project_packages",
+  "version": "1.0.0",
+  "description": "My personal json file where you can find info about this project",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "123"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiccardoSchifaudo94/NPM_Experiment.git"
+  },
+  "keywords": [
+    "My",
+    "Project"
+  ],
+  "author": "Ricky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RiccardoSchifaudo94/NPM_Experiment/issues"
+  },
+  "homepage": "https://github.com/RiccardoSchifaudo94/NPM_Experiment#readme"
+}
