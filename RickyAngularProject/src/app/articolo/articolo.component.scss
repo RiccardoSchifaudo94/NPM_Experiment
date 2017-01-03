@@ -2,12 +2,7 @@
 @import "../../assets/scss/mixins.scss";
 
 button{
-	background-color:$light_blue;
-	border:none;
-	width:100px;
-	height:40px;
-	text-align:center;
-	text-transform:uppercase;
+	@include generateButton($light_blue,none);
 	@include fontGroup($white,14px);
 	margin-top:20px;	
 }

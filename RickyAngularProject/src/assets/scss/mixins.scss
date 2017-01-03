@@ -4,3 +4,12 @@
 	font-size:$font_size;
 	color:$color;
 }
+@mixin generateButton($background_color,$border_color){
+	background-color:$background_color;
+	border:$border_color;
+	width:100px;
+	height:40px;
+	text-align:center;
+	text-transform:uppercase;
+	padding:5px 10px 10px;
+}
