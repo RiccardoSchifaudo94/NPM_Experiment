@@ -1,0 +1,16 @@
+button{
+	background-color:#0C93B9;
+	border:none;
+	color:#fff;
+	width:100px;
+	height:40px;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:300;
+	font-size:14px;
+}
+articolo{
+	background-color:#dedede;
+	height:auto;
+	width:100%;
+}
