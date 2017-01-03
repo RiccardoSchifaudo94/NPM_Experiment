@@ -6,3 +6,22 @@ h1{
 	text-transform:uppercase;
 	@include fontGroup($gray,36px);	
 }
+.input_field{
+	background-color:$light_blue;
+	border:1px solid $light_gray;
+	padding:10px 20px;
+	margin-top:30px;
+	height:auto;
+}
+.input_field input{
+		margin:10px auto;
+		border:1px solid $light_gray;
+		height:30px;
+}
+
+.input_field label{
+	@include fontGroup($light_gray,24px);
+}
+.input_field p{
+	@include fontGroup($dark,18px);
+}

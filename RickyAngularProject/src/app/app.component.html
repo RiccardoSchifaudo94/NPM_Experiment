@@ -1,2 +1,16 @@
 <h1>{{title}}</h1>
 <articolo [articolo]="articolo" (like)="mostraMessaggioRingraziamento($event)"></articolo>
+<div class="input_field">
+	<label>Inserisci numero:</label>
+	<br/>
+	<input type="text" #numero (keyup)="0"/>
+	<br/>
+	<p>Il doppio di {{numero.value}} è {{numero.value*2}}</p>
+</div>
+<div class="input_field">
+	<label>Inserisci numero:</label>
+	<br/>
+	<input type="number" [(ngModel)]="numero_model"/>
+	<br/>
+	<p>Il doppio di {{numero_model}} è {{numero_model*2}}</p>
+</div>

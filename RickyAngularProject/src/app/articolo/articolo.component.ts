@@ -1,4 +1,4 @@
-import { Component,Input,Output,EventEmitter,OnInit} from '@angular/core';
+import { Component,Input,Output,EventEmitter,OnInit,OnChanges,SimpleChange} from '@angular/core';
 import { Articolo } from './articolo';
 
 @Component({
@@ -6,7 +6,7 @@ import { Articolo } from './articolo';
   templateUrl: './articolo.component.html',
   styleUrls: ['./articolo.component.scss']
 })
-export class ArticoloComponent {
+export class ArticoloComponent implements OnInit, OnChanges {
 
   @Input() articolo:Articolo;
   @Output() like = new EventEmitter<{numApprezzamenti:number}>();
@@ -20,7 +20,16 @@ export class ArticoloComponent {
 
   ngOnInit(){
     console.log("componente inizializzato!");
-  }
+  }//chiudi ngOnInit()
+
+  ngOnChanges(changes:{[propertyName:string]:SimpleChange}){
+
+    if(changes["articolo"] && changes["articolo"].currentValue.testo){
+      let testoArticolo = changes["articolo"].currentValue.testo;
+      changes["articolo"].currentValue.testo = testoArticolo.replace("è","\xE9");
+    }//chiudi if
+
+  }//chiudi ngOnChanges()
 
 
 }
