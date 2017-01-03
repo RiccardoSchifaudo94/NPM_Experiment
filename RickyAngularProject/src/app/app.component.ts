@@ -5,14 +5,14 @@ import { Articolo } from './articolo/articolo';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'app works!';
-  myArticolo;
+  articolo;
 
   constructor(){
-  	this.myArticolo = {
+  	this.articolo = {
   		titolo:"Creare miei componenti Angular 2",
   		autore:"Riccardo Schifaudo",
   		testo:"Creare rickyAngularComponents con Angular2 è davvero molto semplice.",
@@ -20,7 +20,7 @@ export class AppComponent {
   	};  
   }//chiudi costruttore 
 
-  mostraMessaggioRigraziamento(event){
-    alert("Grazie per averci lasciato un like a questo articolo ;-) \n  il numero di apprezzamenti è di ${event.numApprezzamenti} like!");
+  mostraMessaggioRingraziamento(event) { 
+      alert("Grazie per aver espresso il tuo apprezzamento per l'articolo! \n Il numero di apprezzamenti raggiunti è ${event.numApprezzamenti}"); 
   }
 }

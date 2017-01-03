@@ -1,0 +1,8 @@
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/mixins.scss";
+
+h1{
+	text-align:center;
+	text-transform:uppercase;
+	@include fontGroup($gray,36px);	
+}

@@ -1,0 +1,6 @@
+@mixin fontGroup($color,$font_size){
+	font-family:"Lato",sans-serif;
+	font-weight:400;
+	font-size:$font_size;
+	color:$color;
+}

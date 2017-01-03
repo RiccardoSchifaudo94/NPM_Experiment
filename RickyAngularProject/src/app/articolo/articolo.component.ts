@@ -1,15 +1,15 @@
-import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Component,Input,Output,EventEmitter,OnInit} from '@angular/core';
 import { Articolo } from './articolo';
 
 @Component({
   selector: 'articolo',
   templateUrl: './articolo.component.html',
-  styleUrls: ['./articolo.component.css']
+  styleUrls: ['./articolo.component.scss']
 })
-export class ArticoloComponent implements OnInit {
+export class ArticoloComponent {
 
   @Input() articolo:Articolo;
-  @Output() like = new EventEmitter<{numApprezzamenti: number}>();
+  @Output() like = new EventEmitter<{numApprezzamenti:number}>();
 
   constructor() {}
 
@@ -18,7 +18,9 @@ export class ArticoloComponent implements OnInit {
     this.like.emit({numApprezzamenti: this.articolo.numApprezzamenti});
   }
 
-  ngOnInit() {
+  ngOnInit(){
+    console.log("componente inizializzato!");
   }
+
 
 }
