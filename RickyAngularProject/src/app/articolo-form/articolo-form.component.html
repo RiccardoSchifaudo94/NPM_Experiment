@@ -1,19 +1,25 @@
 <form> 
   <div> 
     <label for="txtTitolo">Titolo</label>   
-    <input type="text" id="txtTitolo" required> 
+    <input type="text" id="txtTitolo" required [(ngModel)]="model.titolo" name="titolo"> 
   </div> 
  
  
   <div> 
     <label for="txtAutore">Autore</label>   
-    <input type="text" id="txtAutore" required> 
+    <input type="text" id="txtAutore" required [(ngModel)]="model.autore" name="autore"> 
   </div> 
      
   <div> 
     <label for="txtTesto">Testo</label>   
-    <textarea id="txtTesto" required></textarea> 
+    <textarea id="txtTesto" required [(ngModel)]="model.testo" name="testo"></textarea> 
   </div> 
      
   <button type="button">Invia</button> 
 </form> 
+<div>
+ <p>Dati inseriti sono</p>
+ titolo: {{model.titolo}}<br/>
+ autore: {{model.autore}}<br/>
+ testo : {{model.testo}} 
+</div>
