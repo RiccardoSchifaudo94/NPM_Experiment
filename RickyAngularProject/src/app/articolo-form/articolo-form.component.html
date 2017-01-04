@@ -1,7 +1,9 @@
-<form> 
+<form #myForm="ngForm"> 
+  <h4>Scrivi Articolo</h4>
   <div> 
     <label for="txtTitolo">Titolo</label>   
-    <input type="text" id="txtTitolo" required [(ngModel)]="model.titolo" name="titolo"> 
+    <input type="text" id="txtTitolo" required [(ngModel)]="model.titolo" name="titolo" #myTitolo="ngModel"> 
+    <span [hidden]="myTitolo.valid || myTitolo.pristine || !myTitolo.dirty">Il titolo é obbligatorio!</span>
   </div> 
  
  
@@ -15,11 +17,12 @@
     <textarea id="txtTesto" required [(ngModel)]="model.testo" name="testo"></textarea> 
   </div> 
      
-  <button type="button">Invia</button> 
+  <button type="button" [disabled]="!myForm.valid" (click)="inviaArticolo()">Invia</button> 
 </form> 
-<div>
+<div> 
  <p>Dati inseriti sono</p>
  titolo: {{model.titolo}}<br/>
  autore: {{model.autore}}<br/>
- testo : {{model.testo}} 
+ testo : {{model.testo}}
 </div>
+ 

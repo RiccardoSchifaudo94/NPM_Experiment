@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Articolo } from '../articolo/articolo';
+
 
 @Component({
   selector: 'articolo-form',
@@ -7,10 +8,22 @@ import { Articolo } from '../articolo/articolo';
   styleUrls: ['./articolo-form.component.scss']
 })
 export class ArticoloFormComponent implements OnInit {
+	model = new Articolo();
+	elencoArticoli = new Array();
+  	@Output() submit = new EventEmitter<Articolo>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  inviaArticolo(){
+  	this.submit.emit(this.model);
+  }
+
+  addArticolo(articolo){
+  	this.elencoArticoli.push(articolo);
   }
 
 }

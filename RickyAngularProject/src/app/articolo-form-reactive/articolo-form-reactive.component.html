@@ -1,0 +1,29 @@
+<form [formGroup]="myForm"> 
+  <h4>{{"Visualizza Articolo" | uppercase}}</h4>
+  <div> 
+    <label for="txtTitolo">Titolo</label>   
+    <input type="text" id="txtTitolo" formControlName="txtTitolo"> 
+    <strong>
+      <span [hidden]="myForm.controls.txtTitolo.valid || myForm.controls.txtTitolo.pristine">
+        Il titolo è obbligatorio e non può superare i 30 caratteri!
+      </span>
+    </strong> 
+  </div> 
+ 
+ 
+  <div> 
+    <label for="txtAutore">Autore</label>   
+    <input type="text" id="txtAutore" formControlName="txtAutore"> 
+  </div> 
+     
+  <div> 
+    <label for="txtTesto">Testo</label>   
+    <textarea id="txtTesto" formControlName="txtTesto"></textarea> 
+    <strong [hidden]="myForm.controls.txtTesto.valid || myForm.controls.txtTesto.pristine">
+      Il testo minimo deve essere di 10 caratteri<br/>
+      e non può superare i 250 caratteri
+    </strong>
+  </div> 
+     
+  <button type="button" (click)="visualizzaArticolo()">Invia</button> 
+</form>

@@ -1,0 +1,33 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+form{
+	background-color:$light_blue;
+	margin-top:20px;
+	padding:10px 20px;
+	input,textarea{
+		display:block;
+		width:20%;
+		height:40px;
+		outline:none;
+		border:1px solid $dark;
+		margin:20px 0;
+	}
+	label{
+		@include fontGroup($white,21px);
+		text-transform:uppercase;
+	}
+	button{
+		@include fontGroup($dark,16px);
+		@include generateButton($light_gray,1px solid $dark);
+		margin-top:10px;
+	}
+}
+
+.ng-valid{
+	border:2px solid green!important;
+}
+
+.ng-invalid{
+	border:2px solid red!important;
+}
